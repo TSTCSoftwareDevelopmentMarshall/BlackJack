@@ -24,9 +24,11 @@ hand::hand()
 int hand::initializeHand()
 {
 	userCards.clear();
+	return 0;
 }
 int hand::addCard(card newCard)
 {
+	
 	userCards.push_back(newCard);
 	return 0;
 }
@@ -35,5 +37,16 @@ hand::~hand()
 }
 int hand::showCards()
 {
-
+	return 0;
 }
+card hand::getFirstCard()
+{
+	return userCards.front();
+}
+card hand::getSecondCard()
+{
+
+	return userCards[1];
+}
+
+// need to change ace value somehow.

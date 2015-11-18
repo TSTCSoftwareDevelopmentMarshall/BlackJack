@@ -9,7 +9,7 @@ int card::getValue()
 int card::assignValue( int val)
 {
 	value = val;
-
+	return 0;
 }
 int card::setValue()
 {
@@ -28,7 +28,11 @@ if (symb >= '2' && symb <= '9')
 	}
 	return 0;
 }
-
+int card::reInitializeCard(char symbol, char suits)
+{
+	card::card(symb, suits); // I hope that it is allowed
+	return 0;
+}
 card::card(char symbol, char suits)
 {
 	symb = symbol;

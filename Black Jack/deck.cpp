@@ -2,9 +2,20 @@
 #include <algorithm>
 using namespace std;
 
+
+card deck::getFirstCard()
+{
+	return shoe.front();
+}
+
+card deck::getSecondCard()
+{
+	return shoe[1];
+}
 int deck::shuffle()
 {
 	random_shuffle(shoe.begin(), shoe.end());
+	return 0;
 }
 int deck::initialize(int amntOfDecks)
 {
@@ -45,9 +56,9 @@ int deck::initialize(int amntOfDecks)
 
 					card cards('K', symb);
 					shoe.push_back(cards);
-					card cards('Q', symb);
+				    cards.reInitializeCard('Q', symb);
 					shoe.push_back(cards);
-					card cards('J', symb);
+					cards.reInitializeCard('J', symb);
 					shoe.push_back(cards);
 
 					num = num + 1;
@@ -57,6 +68,7 @@ int deck::initialize(int amntOfDecks)
 			num_of_decks = num_of_decks + 1;
 	} //end of external while loop
 	shuffle();
+	return 0;
 }
 deck::deck(int amn_of_decks)
 {

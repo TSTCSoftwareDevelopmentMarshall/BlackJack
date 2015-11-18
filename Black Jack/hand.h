@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include "card.h"
-
+using namespace std;
 class hand
 {
 public:
@@ -9,6 +9,8 @@ public:
 	~hand();
 	int calcTotalValue();
 	int getTotVal();
+	card getFirstCard();
+	card getSecondCard();
 	int addCard(card ); 
 	int initializeHand();
 	int showCards(); // how are we going to do this? 

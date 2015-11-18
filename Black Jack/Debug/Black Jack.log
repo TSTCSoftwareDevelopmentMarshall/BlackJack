@@ -1,19 +1,18 @@
-﻿Build started 11/16/2015 3:33:20 PM.
-     1>Project "C:\Users\lllzombielll\Desktop\Black Jack\Black Jack\Black Jack.vcxproj" on node 2 (Build target(s)).
+﻿Build started 11/18/2015 9:07:33 AM.
+     1>Project "E:\C++\final project\BlackJack for rewriting\Black Jack\Black Jack.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "Black Jack.cpp"
-         Black Jack.cpp
-     1>c:\users\lllzombielll\desktop\black jack\black jack\black jack.cpp(679): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\lllzombielll\desktop\black jack\black jack\black jack.cpp(705): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\lllzombielll\desktop\black jack\black jack\black jack.cpp(746): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\lllzombielll\desktop\black jack\black jack\black jack.cpp(469): warning C4715: 'getTopCard' : not all control paths return a value
-     1>c:\users\lllzombielll\desktop\black jack\black jack\black jack.cpp(564): warning C4715: 'playAnotherHand' : not all control paths return a value
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt player.cpp
+         player.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\lllzombielll\Desktop\Black Jack\Debug\Black Jack.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\lllzombielll\Desktop\Black Jack\Debug\Black Jack.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\lllzombielll\Desktop\Black Jack\Debug\Black Jack.lib" /MACHINE:X86 "Debug\Black Jack.obj"
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\C++\final project\BlackJack for rewriting\Debug\Black Jack.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\C++\final project\BlackJack for rewriting\Debug\Black Jack.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\C++\final project\BlackJack for rewriting\Debug\Black Jack.lib" /MACHINE:X86 "Debug\Black Jack.obj"
+         Debug\card.obj
+         Debug\deck.obj
+         Debug\hand.obj
+         Debug\player.obj
          Debug\stdafx.obj
-         Black Jack.vcxproj -> C:\Users\lllzombielll\Desktop\Black Jack\Debug\Black Jack.exe
-     1>Done Building Project "C:\Users\lllzombielll\Desktop\Black Jack\Black Jack\Black Jack.vcxproj" (Build target(s)).
+         Black Jack.vcxproj -> E:\C++\final project\BlackJack for rewriting\Debug\Black Jack.exe
+     1>Done Building Project "E:\C++\final project\BlackJack for rewriting\Black Jack\Black Jack.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.87
+Time Elapsed 00:00:02.51
