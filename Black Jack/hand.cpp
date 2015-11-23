@@ -48,5 +48,7 @@ card hand::getSecondCard()
 
 	return userCards[1];
 }
-
-// need to change ace value somehow.
+card hand::getLastCard()
+{
+	return userCards.back();
+}

@@ -25,18 +25,9 @@ void main()
 	bal = askBalance();
 	player user(bal, name);
 	player dealer(1000, "Dealer");
-	chooseLevelOfDificulty();
 
-	while (stop == false)
-	{
-		////////////////////
-		cout << "Would you like to play another hand? (Y/N)" << endl;
-		cin >> answer;
-		if (answer != 'Y')
-		{
-			stop = true;
-		}
-	}
+
+	
 
 }
 
@@ -74,20 +65,6 @@ double askBalance()   // ask user about max balance
 	}
 	return balance;
 }
-
-
-
-
-//
-//the dealer went bust. You win! 
-//blackJack you win with ratio 3:2    - dealer is not 21 you are 21
-//push in the dealers favor .    ... =======
-
-
-
-
-
-
 
 
 
