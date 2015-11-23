@@ -6,7 +6,8 @@ using namespace std;
 class player
 {
 public:
-	bool checkBackdoorKenny(); 
+	bool checkBackdoorKenny();
+    //Check if first card is a 10 and second card is an ace (Called Backdoor Kenny)
 	int initializePlayer(); 
 	bool checkVictory( player& ) ;
 	player(double, string );  
