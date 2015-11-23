@@ -17,54 +17,13 @@ double askBalance();
 
 void main()
 {
-	bool stop = false;
-	char answer;
-	string name;
-	double bal;
-	name = askName();
-	bal = askBalance();
-	player user(bal, name);
-	player dealer(1000, "Dealer");
+	
 
 
 	
 
 }
 
-
-
-
-string askName() // ask user's name
-{
-	string name;
-	cout << "Enter your name. " << endl;
-	cin >> name;
-	return name;
-}
-double askBalance()   // ask user about max balance
-{
-	double balance;
-	bool stop = false;
-	while (stop == false)
-	{
-		try
-			{
-				cout << "Enter your max balance. " << endl;
-				cin >> balance;
-				if (!cin)
-				{
-					throw 1;
-				}
-				cout << "Your balance is $" << balance << "." << endl;
-				stop = true;
-			}
-			catch (int)
-			{
-				cout << "Incorrect input. Please try again." << endl;
-			}
-	}
-	return balance;
-}
 
 
 
