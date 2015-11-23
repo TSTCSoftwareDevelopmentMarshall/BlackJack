@@ -15,9 +15,10 @@ string askName();
 double askBalance();
 
 
-void main()
+int main()
 {
 	
+	return 0;
 
 
 	
