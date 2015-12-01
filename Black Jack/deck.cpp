@@ -60,7 +60,8 @@ int deck::initialize(int amntOfDecks)
 					shoe.push_back(cards);
 					cards.reInitializeCard('J', symb);
 					shoe.push_back(cards);
-
+					cards.reInitializeCard('A', symb);
+					shoe.push_back(cards);
 					num = num + 1;
 				}//end of while loop
 
