@@ -1,54 +1,38 @@
 #include "hand.h"
 using namespace std;
 
+Hand::Hand()
+{
+	mNumCards = 0;
+	mTotalVal = 0;
+	mHand.clear();
+}
 
-int hand:: calcTotalValue()
+int Hand::getTotVal()
 {
-	int num = 0;
-	int total = 0;
-	while ( num != userCards.size() )
-	{
-		total =total + userCards[num].getValue();
-	}
+	return mTotalVal;
+}
 
-	return 0;
-}
-int hand:: getTotVal()
+void Hand::addCard(Card newCard)
 {
-	calcTotalValue();
-	return totalVal;
+	mHand.push_back(newCard);
+	mTotalVal += newCard.getCardValue;
+	mNumCards++;
 }
-hand::hand()
-{
-}
-int hand::initializeHand()
-{
-	userCards.clear();
-	return 0;
-}
-int hand::addCard(card newCard)
-{
-	
-	userCards.push_back(newCard);
-	return 0;
-}
-hand::~hand()
-{
-}
-int hand::showCards()
-{
-	return 0;
-}
-card hand::getFirstCard()
-{
-	return userCards.front();
-}
-card hand::getSecondCard()
-{
 
-	return userCards[1];
-}
-card hand::getLastCard()
+void Hand::showCards()
 {
-	return userCards.back();
+	//TODO:We need to figure out how we plan to do this.
+}
+Card Hand::getFirstCard()
+{
+	return mHand.front();
+}
+Card Hand::getSecondCard()
+{
+	return mHand[1];
+}
+Card Hand::getLastCard()
+{
+	return mHand.back();
 }
