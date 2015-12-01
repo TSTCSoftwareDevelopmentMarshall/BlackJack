@@ -2,86 +2,35 @@
 #include <algorithm>
 using namespace std;
 
-
-card deck::getFirstCard()
+Deck::Deck()
 {
-	return shoe.front();
-}
-
-card deck::getSecondCard()
-{
-	return shoe[1];
-}
-int deck::shuffle()
-{
-	random_shuffle(shoe.begin(), shoe.end());
-	return 0;
-}
-int deck::initialize(int amntOfDecks)
-{
-	int num = 0;
-	char symb;
-	int num_of_decks = 0;
-	//shoe.resize(amntOfDecks * 52);
-	while (num_of_decks < amntOfDecks)
-	{
-				while (num < 4)
-				{
-					switch (num)
-					{
-					case 0:
-						symb = 'C';
-						break;
-					case 1:
-						symb = 'S';
-						break;
-					case 2:
-						symb = 'H';
-						break;
-					case 3:
-						symb = 'D';
-						break;
-					default:
-						break;
-				}// end of switch
-
-					int card_num = 2;
-					while (card_num < 10)
-					{
-			
-						card cards((char)card_num, symb);
-						shoe.push_back(cards);
-						card_num = card_num + 1;
-					}
-
-					card cards('K', symb);
-					shoe.push_back(cards);
-				    cards.reInitializeCard('Q', symb);
-					shoe.push_back(cards);
-					cards.reInitializeCard('J', symb);
-					shoe.push_back(cards);
-					cards.reInitializeCard('A', symb);
-					shoe.push_back(cards);
-					num = num + 1;
-				}//end of while loop
-
-
-			num_of_decks = num_of_decks + 1;
-	} //end of external while loop
+	/*TODO:Figure out a good way to add image and value into this function using QT reference file and CardValue enum*/
+	string image;
+	int value = 0;
+	for (Card::SUITS cs = Card::SPADE; cs <= Card::CLUB; cs++)
+		for (int i = 1; i <= 13; ++i)
+			 mDeck.push_back(Card(cs, image, value));
 	shuffle();
-	return 0;
 }
-deck::deck(int amn_of_decks)
+
+Card Deck::getFirstCard()
 {
-	initialize(amn_of_decks);
+	return mDeck.front();
 }
-card deck::giveCard()
+
+Card Deck::getSecondCard()
 {
-	card cards;
-	cards = shoe.back();
-	shoe.pop_back();
-	return cards;
+	return mDeck[1];
 }
-deck::~deck()
+void Deck::shuffle()
 {
+	random_shuffle(mDeck.begin(), mDeck.end());
 }
+
+Card Deck::giveCard()
+{
+	Card card = mDeck.back();
+	mDeck.pop_back();
+	return card;
+}
+
