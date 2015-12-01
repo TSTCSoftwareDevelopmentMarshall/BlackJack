@@ -1,70 +1,25 @@
 #include "card.h"
-#include <cctype>
 using namespace std;
 
-int card::getValue()
+Card::Card(SUITS suit, string image, int value)
 {
-	return value;
-}
-int card::assignValue( int val)
-{
-	value = val;
-	return 0;
-}
-int card::setValue()
-{
-
-if (symb >= '2' && symb <= '9')
-	{
-		value = (int)symb;
-	}
-	else if (symb == 'K' || symb == 'J' || symb == 'Q')
-	{
-		value = 10;
-	}
-	else
-	{
-		value = 11; // should it be 1 in some cases? 
-	}
-	return 0;
-}
-int card::reInitializeCard(char symbol, char suits)
-{
-	card::card(symb, suits); // I hope that it is allowed
-	return 0;
-}
-card::card(char symbol, char suits)
-{
-	symb = symbol;
-	switch (suits)
-	{
-	case 'C':
-	case 'c':
-		suit = club;
-		break;
-	case 'S':
-	case 's':
-		suit = spade;
-		break;
-	case 'H':
-	case 'h':
-		suit = heart;
-		break;
-	case 'D' :
-	case 'd':
-		suit = diamond;
-		break;
-	default:
-		break;
-	}
-	setValue();
-}
-card::card()
-{
-
-
+	mCardSuit = suit;
+	mCardImage = image;
+	mCardValue = value;
 }
 
-card::~card()
+
+int Card::getCardValue()
 {
+	return mCardValue;
+}
+
+void Card::setCardValue(int value)
+{
+	mCardValue = value;
+}
+
+Card::SUITS operator++(Card::SUITS &cs, int)
+{
+	return cs = static_cast<Card::SUITS>(cs + 1);
 }
