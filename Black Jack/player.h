@@ -6,6 +6,7 @@ using namespace std;
 class player
 {
 public:
+
 	player(double balance, string name);
 	player(); //had to create a default constructor :( 
 	~player();

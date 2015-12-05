@@ -4,6 +4,7 @@
 #include "dealer.h"
 #include <iostream>
 using namespace std;
+
 game::game(double balance, string name)
 {
 	player mNewPlayer(balance, name);
@@ -14,10 +15,13 @@ card game::getFirstCard()
 	return shoe->getFirstCard();
 }
 
+
+
 game::~game()
 {
 	delete shoe;
 }
+
 bool game::checkBackdoorKenny()
 {
 	bool victory = false;

@@ -33,9 +33,11 @@ void player::setBet(double bet)
 	mCurrentBet = bet;
 	mBalance = mBalance - bet;
 }
-player::~player()
-{
-}
+
+player::player()
+{}
+
+
 void player::victory(double percentage)
 {
 	mBalance = mBalance + mCurrentBet + (mCurrentBet * percentage);
@@ -52,11 +54,4 @@ void player::push()
 	mBalance = mBalance + mCurrentBet;
 	mCurrentBet = 0;
 }
-
-
-
-
-
-
-
 
