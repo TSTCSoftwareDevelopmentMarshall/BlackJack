@@ -85,8 +85,6 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="hand.h" />
     <ClInclude Include="player.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Black Jack.cpp" />
@@ -96,7 +94,6 @@
     <ClCompile Include="game.cpp" />
     <ClCompile Include="hand.cpp" />
     <ClCompile Include="player.cpp" />
-    <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

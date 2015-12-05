@@ -1,4 +1,5 @@
-#pragma once
+#ifndef HAND_H
+#define HAND_H
 #include <vector>
 #include "card.h"
 using namespace std;
@@ -17,5 +18,6 @@ private:
 	int mNumCards;
 	int mTotalVal;
 };
+#endif
 
 // need to change ace value somehow.
