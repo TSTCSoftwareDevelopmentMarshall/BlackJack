@@ -12,7 +12,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    game myGame;
 
     //Set up view here
     //Testing - not finished yet
@@ -62,4 +61,15 @@ void MainWindow::on_btnSurrender_clicked()
 }
 void MainWindow::on_doubleSpinBox_valueChanged() {
     cout <<"It changed" << endl;
+}
+
+void MainWindow::on_actionNew_Game_triggered()
+{
+    myGame = game();
+    myGame.mPlayer.mHand.getFirstCard().showCard(ui->imgLblCard1);
+    myGame.mPlayer.mHand.getSecondCard().showCard(ui->imgLblCard2);
+    ui->imgLblCard3->setVisible(false);
+    myGame.mDealer.mHand.getFirstCard().showCard(ui->imgLblCard4);
+    myGame.mDealer.mHand.getSecondCard().showCard(ui->imgLblCard5);
+    ui->imgLblCard6->setVisible(false);
 }

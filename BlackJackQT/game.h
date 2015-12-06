@@ -10,7 +10,6 @@ class game
 {
 public:
     game();
-
     dealer mDealer;
     player mPlayer;
     Deck mDeck;

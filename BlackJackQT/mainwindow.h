@@ -35,6 +35,8 @@ private slots:
 
     void on_doubleSpinBox_valueChanged();
 
+    void on_actionNew_Game_triggered();
+
 private:
     Ui::MainWindow *ui;
     QPixmap image;

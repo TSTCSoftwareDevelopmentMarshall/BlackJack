@@ -222,6 +222,13 @@
     </property>
     <addaction name="actionRules"/>
    </widget>
+   <widget class="QMenu" name="menuGame">
+    <property name="title">
+     <string>Game</string>
+    </property>
+    <addaction name="actionNew_Game"/>
+   </widget>
+   <addaction name="menuGame"/>
    <addaction name="menuRules"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
@@ -236,6 +243,11 @@
   <action name="actionRules">
    <property name="text">
     <string>Rules</string>
+   </property>
+  </action>
+  <action name="actionNew_Game">
+   <property name="text">
+    <string>New Game</string>
    </property>
   </action>
  </widget>

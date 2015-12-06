@@ -329,7 +329,6 @@ void Deck::shuffle()
 {
     srand ( time(NULL) );
     random_shuffle(mDeck.begin(), mDeck.end());
-    cout << "Shuffling" << endl;
 }
 
 Card Deck::giveCard()
