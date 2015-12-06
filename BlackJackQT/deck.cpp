@@ -1,6 +1,7 @@
 #include "deck.h"
 #include <algorithm>
 #include <iostream>
+#include <time.h>
 using namespace std;
 
 Deck::Deck()
@@ -326,7 +327,9 @@ Card Deck::getSecondCard()
 }
 void Deck::shuffle()
 {
-	random_shuffle(mDeck.begin(), mDeck.end());
+    srand ( time(NULL) );
+    random_shuffle(mDeck.begin(), mDeck.end());
+    cout << "Shuffling" << endl;
 }
 
 Card Deck::giveCard()

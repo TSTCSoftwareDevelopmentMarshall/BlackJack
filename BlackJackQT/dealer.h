@@ -3,7 +3,7 @@
 
 #include "player.h"
 
-class dealer :public player
+class dealer : public player
 {
 public:
 	dealer();

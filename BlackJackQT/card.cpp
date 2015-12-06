@@ -1,4 +1,5 @@
 #include "card.h"
+#include "QImage"
 using namespace std;
 
 Card::Card(SUITS suit, QString image, int value)
@@ -26,4 +27,15 @@ Card::SUITS operator++(Card::SUITS &cs, int)
 
 QString Card::getCardImage() {
     return mCardImage;
+}
+
+void Card::showCard(QLabel *label) {
+    QPixmap image;
+    QImage *imageObject;
+    imageObject = new QImage();
+    imageObject->load(getCardImage());
+    image = QPixmap::fromImage(*imageObject);
+    image = image.scaled(150,150,Qt::KeepAspectRatio);
+    label->setPixmap(image);
+    label->setFixedSize(image.size());
 }

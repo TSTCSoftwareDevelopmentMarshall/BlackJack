@@ -1,5 +1,4 @@
 #include "dealer.h"
-#include "player.h"
 
 
 dealer::dealer()

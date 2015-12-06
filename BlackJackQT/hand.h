@@ -1,8 +1,9 @@
 #ifndef HAND_H
 #define HAND_H
+
 #include <vector>
 #include "card.h"
-using namespace std;
+#include "QLabel"
 class Hand
 {
 public:
@@ -12,7 +13,7 @@ public:
 	Card getSecondCard();
 	void addCard(Card newCard);
 	Card getLastCard(); // returns the last card (the most recent) from the hand
-	void showCards(); // still need to do
+    void showCards(QLabel label); // still need to do
 private:
 	vector<Card> mHand;
 	int mNumCards;

@@ -1,6 +1,5 @@
 #include "player.h"
-#include <iostream>
-#include <string>
+
 using namespace std;
 
 
@@ -8,8 +7,8 @@ player::player()
 {
 	mVictories = 0;
 	mLost = 0;
-	mCurrentBet = 0;
-	setBalance(0.0);
+    mCurrentBet = 0;
+    setBalance();
 }
 
 int  player::getTotalVal()
@@ -19,9 +18,9 @@ int  player::getTotalVal()
 
 }
 
-void player::setBalance(double balance)
+void player::setBalance()
 {
-	mBalance = balance;
+    //Set balance with label
 }
 
 double player::getBalance()
@@ -32,10 +31,10 @@ double player::getBet()
 {
 	return mCurrentBet;
 }
-void player::setBet(double bet)
+void player::setBet()
 {
-	mCurrentBet = bet;
-	mBalance = mBalance - bet;
+   // mCurrentBet = MainWindow::ui->doubleSpinBox->value();
+    //mBalance = mBalance - bet;
 }
 
 

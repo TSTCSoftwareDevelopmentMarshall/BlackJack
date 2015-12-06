@@ -20,9 +20,9 @@ void Hand::addCard(Card newCard)
 	mNumCards++;
 }
 
-void Hand::showCards()
+void Hand::showCards(QLabel label)
 {
-	//TODO:We need to figure out how we plan to do this.
+    //ToDO:Figure out how to do this
 }
 Card Hand::getFirstCard()
 {

@@ -1,7 +1,9 @@
 #ifndef CARD_H
 #define CARD_H
+
 #include <string>
 #include "QString"
+#include "QLabel"
 using namespace std;
 class Card
 {
@@ -27,6 +29,7 @@ public:
 	int getCardValue();
 	void setCardValue(int value);
     QString getCardImage();
+    void showCard(QLabel *label);
 	
 
 

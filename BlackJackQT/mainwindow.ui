@@ -79,7 +79,7 @@
      <string>Surrender</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="lblCurrentBet">
     <property name="geometry">
      <rect>
       <x>790</x>
@@ -245,7 +245,7 @@
   <connection>
    <sender>doubleSpinBox</sender>
    <signal>valueChanged(double)</signal>
-   <receiver>label</receiver>
+   <receiver>lblCurrentBet</receiver>
    <slot>setNum(double)</slot>
    <hints>
     <hint type="sourcelabel">

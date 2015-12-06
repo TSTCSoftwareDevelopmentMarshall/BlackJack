@@ -5,6 +5,7 @@
 #include "ui_mainwindow.h"
 #include "info.h"
 #include "deck.h"
+#include "game.h"
 
 
 namespace Ui {
@@ -32,13 +33,15 @@ private slots:
 
     void on_btnSurrender_clicked();
 
+    void on_doubleSpinBox_valueChanged();
+
 private:
     Ui::MainWindow *ui;
     QPixmap image;
     QImage *imageObject;
-    QGraphicsScene *scene;
     Info info;
     Deck deck;
+    game myGame;
 
 };
 
