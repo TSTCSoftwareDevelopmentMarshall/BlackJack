@@ -11,7 +11,7 @@ public:
 	int getTotalVal();
 	double getBalance();
     void setBalance();
-    void setBet();
+    void setBet(double value);
 	double getBet();
 	void victory(double percentage);
 	void defeat();

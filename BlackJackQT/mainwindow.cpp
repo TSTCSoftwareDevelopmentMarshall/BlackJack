@@ -14,13 +14,17 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     //Set up view here
-    //Testing - not finished yet
-    myGame.mPlayer.mHand.getFirstCard().showCard(ui->imgLblCard1);
-    myGame.mPlayer.mHand.getSecondCard().showCard(ui->imgLblCard2);
-    ui->imgLblCard3->setVisible(false);
-    myGame.mDealer.mHand.getFirstCard().showCard(ui->imgLblCard4);
-    myGame.mDealer.mHand.getSecondCard().showCard(ui->imgLblCard5);
-    ui->imgLblCard6->setVisible(false);
+    hideLabels();
+    myGame.toggleBet(ui->doubleSpinBox);
+    myGame.mPlayer.mHand.getFirstCard().showCard(ui->imgLblCard7);
+    myGame.mPlayer.mHand.getSecondCard().showCard(ui->imgLblCard8);
+    myGame.mDealer.mHand.getFirstCard().showCard(ui->imgLblCard1);
+    myGame.mDealer.mHand.getSecondCard().showCard(ui->imgLblCard2);
+    ui->imgLblCard1->setVisible(true);
+    ui->imgLblCard2->setVisible(true);
+
+    ui->imgLblCard7->setVisible(true);
+    ui->imgLblCard8->setVisible(true);
 
 }
 
@@ -36,8 +40,35 @@ void MainWindow::on_actionRules_triggered()
 
 void MainWindow::on_btnHit_clicked()
 {
+    int whatHappened;
     //Do something when hit button is clicked
-
+    if(!myGame.mGameOver) {
+    if(!ui->imgLblCard9->isVisible()){
+        myGame.hit(ui->imgLblCard9);
+    } else if(!ui->imgLblCard10->isVisible()){
+        myGame.hit(ui->imgLblCard10);
+    } else if(!ui->imgLblCard11->isVisible()){
+        myGame.hit(ui->imgLblCard11);
+    } else if(!ui->imgLblCard12->isVisible()){
+        myGame.hit(ui->imgLblCard12);
+    } else {
+        cout << "Ran out of space...." << endl;
+    }
+    whatHappened = myGame.checkStatus(myGame.mPlayer);
+    switch (whatHappened) {
+    case 0:
+        cout << "Keep playing" << endl;
+        break;
+    case 1:
+        cout << "Winner" << endl;
+        hideLabels();
+        break;
+    case 2:
+        cout << "Loser" << endl;
+        hideLabels();
+        break;
+    }
+}
 }
 
 void MainWindow::on_btnStand_clicked()
@@ -60,16 +91,36 @@ void MainWindow::on_btnSurrender_clicked()
     //Do something when surrender button is clicked
 }
 void MainWindow::on_doubleSpinBox_valueChanged() {
-    cout <<"It changed" << endl;
+    myGame.mPlayer.setBet(ui->doubleSpinBox->value());
 }
 
 void MainWindow::on_actionNew_Game_triggered()
 {
+
     myGame = game();
-    myGame.mPlayer.mHand.getFirstCard().showCard(ui->imgLblCard1);
-    myGame.mPlayer.mHand.getSecondCard().showCard(ui->imgLblCard2);
+    myGame.toggleBet(ui->doubleSpinBox);
+    myGame.mPlayer.mHand.getFirstCard().showCard(ui->imgLblCard7);
+    myGame.mPlayer.mHand.getSecondCard().showCard(ui->imgLblCard8);
+    myGame.mDealer.mHand.getFirstCard().showCard(ui->imgLblCard1);
+    myGame.mDealer.mHand.getSecondCard().showCard(ui->imgLblCard2);
+    ui->imgLblCard1->setVisible(true);
+    ui->imgLblCard2->setVisible(true);
+
+    ui->imgLblCard7->setVisible(true);
+    ui->imgLblCard8->setVisible(true);
+}
+
+void MainWindow::hideLabels() {
+    ui->imgLblCard1->setVisible(false);
+    ui->imgLblCard2->setVisible(false);
     ui->imgLblCard3->setVisible(false);
-    myGame.mDealer.mHand.getFirstCard().showCard(ui->imgLblCard4);
-    myGame.mDealer.mHand.getSecondCard().showCard(ui->imgLblCard5);
+    ui->imgLblCard4->setVisible(false);
+    ui->imgLblCard5->setVisible(false);
     ui->imgLblCard6->setVisible(false);
+    ui->imgLblCard7->setVisible(false);
+    ui->imgLblCard8->setVisible(false);
+    ui->imgLblCard9->setVisible(false);
+    ui->imgLblCard10->setVisible(false);
+    ui->imgLblCard11->setVisible(false);
+    ui->imgLblCard12->setVisible(false);
 }

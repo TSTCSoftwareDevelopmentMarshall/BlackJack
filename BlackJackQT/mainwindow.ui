@@ -170,8 +170,8 @@
    <widget class="QLabel" name="imgLblCard4">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>200</y>
+      <x>440</x>
+      <y>40</y>
       <width>31</width>
       <height>21</height>
      </rect>
@@ -183,8 +183,8 @@
    <widget class="QLabel" name="imgLblCard6">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>200</y>
+      <x>710</x>
+      <y>40</y>
       <width>31</width>
       <height>21</height>
      </rect>
@@ -196,14 +196,92 @@
    <widget class="QLabel" name="imgLblCard5">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>200</y>
+      <x>570</x>
+      <y>40</y>
       <width>31</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
      <string>Card5</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgLblCard12">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>210</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Card12</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgLblCard9">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>210</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Card9</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgLblCard7">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>210</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Card7</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgLblCard8">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>210</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Card8</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgLblCard10">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>210</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Card10</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgLblCard11">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>210</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Card11</string>
     </property>
    </widget>
   </widget>

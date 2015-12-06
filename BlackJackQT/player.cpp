@@ -8,7 +8,7 @@ player::player()
 	mVictories = 0;
 	mLost = 0;
     mCurrentBet = 0;
-    setBalance();
+    mBalance = 0;
 }
 
 int  player::getTotalVal()
@@ -31,9 +31,9 @@ double player::getBet()
 {
 	return mCurrentBet;
 }
-void player::setBet()
+void player::setBet(double value)
 {
-   // mCurrentBet = MainWindow::ui->doubleSpinBox->value();
+    mCurrentBet = value;
     //mBalance = mBalance - bet;
 }
 
