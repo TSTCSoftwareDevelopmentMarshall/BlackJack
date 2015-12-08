@@ -17,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //Set up view here
     //Testing - not finished yet
+    myGame.mPlayer.setBalance();
 
 
     ui->lblBalance->setText(QString::number(myGame.mPlayer.getBalance()));
@@ -149,6 +150,8 @@ void MainWindow::on_doubleSpinBox_valueChanged() {
 void MainWindow::on_actionNew_Game_triggered()
 {
     myGame = game();
+    myGame.mPlayer.setBalance();
+
 
     delete pLayout;
     qDeleteAll(ui->widgetP->children());

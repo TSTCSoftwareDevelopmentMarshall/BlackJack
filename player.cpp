@@ -9,7 +9,7 @@ player::player()
 	mVictories = 0;
 	mLost = 0;
     mCurrentBet = 0;
-    setBalance();
+    mBalance = 0;
 }
 
 int  player::getTotalVal()
