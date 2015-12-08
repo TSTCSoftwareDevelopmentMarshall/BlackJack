@@ -54,7 +54,9 @@ double player::victory(double percentage)
 }
 void player::defeat()
 {
+
     mBalance = mBalance - mCurrentBet;
+
 	mCurrentBet = 0;
 	mLost++;
 }

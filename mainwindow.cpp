@@ -121,7 +121,9 @@ void MainWindow::declareVictory(double percentage)
     disableButtons();
     prize = myGame.mPlayer.victory(percentage);
     ui->lblNum->setText(QString::number(prize));
+
     ui->lblBalance->setText(QString ::number(myGame.mPlayer.getBalance()));
+
     delete pLayout;
     delete dLayout;
 
@@ -146,7 +148,9 @@ void MainWindow::on_btnSurrender_clicked()
     ui->lblNum->setText(QString::number(myGame.mPlayer.getBet()));
     disableButtons();
     myGame.mPlayer.defeat();
+
     ui->lblBalance->setText(QString ::number(myGame.mPlayer.getBalance()));
+
 }
 
 
@@ -181,6 +185,7 @@ void MainWindow::on_actionNew_Game_triggered()
     myGame.mDealer.mHand.getSecondCard().showCard(label3);
     dLayout->addWidget(label2);
     dLayout->addWidget(label3);
+
     if (myGame.mPlayer.getBalance() == 0)
     {
         disableButtons();
