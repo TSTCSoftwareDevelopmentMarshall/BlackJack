@@ -3,7 +3,7 @@
 
 dealer::dealer()
 {
-
+    mBalance = 999999999999999999;
 }
 
 bool dealer::soft17()

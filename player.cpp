@@ -7,9 +7,7 @@ using namespace std;
 player::player()
 {
 	mVictories = 0;
-	mLost = 0;
-    mCurrentBet = 0;
-    mBalance = 99999999999999; //Default for dealer
+    mLost = 0;
 }
 
 int  player::getTotalVal()

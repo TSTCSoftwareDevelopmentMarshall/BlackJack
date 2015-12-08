@@ -14,6 +14,7 @@ public:
     bool checkDefeat();
     double checkVictory();
     bool checkKenny();
+    void deal();
     game();
     dealer mDealer;
     player mPlayer;

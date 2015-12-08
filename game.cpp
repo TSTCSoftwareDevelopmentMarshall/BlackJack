@@ -73,7 +73,12 @@ double game::checkVictory()
 }
 
 
-
+void game::deal() {
+    mDealer.mHand.addCard(mDeck.giveCard());
+    mPlayer.mHand.addCard(mDeck.giveCard());
+    mDealer.mHand.addCard(mDeck.giveCard());
+    mPlayer.mHand.addCard(mDeck.giveCard());
+}
 
 
 

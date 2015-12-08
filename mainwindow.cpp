@@ -150,7 +150,7 @@ void MainWindow::on_btnSurrender_clicked()
 void MainWindow::on_actionNew_Game_triggered()
 {
     enable();
-    myGame = game();
+    myGame.deal();
     myGame.mPlayer.setBet();
     ui->lblCurrentBet->setText(QString::number(myGame.mPlayer.getBet()));
     delete pLayout;
