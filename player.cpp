@@ -36,14 +36,13 @@ double player::getBet()
 {
 	return mCurrentBet;
 }
+
 void player::setBet()
 {
     QInputDialog * dialog = new QInputDialog();
     dialog->setOptions(QInputDialog:: NoButtons);
     mCurrentBet = dialog->getDouble(NULL, "Get Total Bet", "Amount: ", 10, 10, 100000, 2);
 }
-
-
 
 double player::victory(double percentage)
 {

@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+
     ui->setupUi(this);
 
     //Set up view here
@@ -144,12 +145,11 @@ void MainWindow::on_btnSurrender_clicked()
     disableButtons();
     myGame.mPlayer.defeat();
 }
-void MainWindow::on_doubleSpinBox_valueChanged() {
-    cout <<"It changed" << endl;
-}
+
 
 void MainWindow::on_actionNew_Game_triggered()
 {
+    enable();
     myGame = game();
     myGame.mPlayer.setBet();
     ui->lblCurrentBet->setText(QString::number(myGame.mPlayer.getBet()));
@@ -179,4 +179,17 @@ void MainWindow::on_actionNew_Game_triggered()
     dLayout->addWidget(label2);
     dLayout->addWidget(label3);
 
+
+
 }
+
+void MainWindow::enable()
+{
+    ui->lblInfo->setText("");
+    ui->lblAmount->setText("");
+    ui->lblNum->setText("");
+    ui->btnHit->setDisabled(false);
+    ui->btnStand->setDisabled(false );
+    ui->btnSurrender->setDisabled(false);
+}
+

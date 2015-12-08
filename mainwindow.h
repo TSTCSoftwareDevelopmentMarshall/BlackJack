@@ -35,9 +35,10 @@ private slots:
 
     void disableButtons();
 
-    void on_doubleSpinBox_valueChanged();
+    void  on_actionNew_Game_triggered();
 
-    void on_actionNew_Game_triggered();
+    void  enable();
+
 
 private:
     Ui::MainWindow *ui;
