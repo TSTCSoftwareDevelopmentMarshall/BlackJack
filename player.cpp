@@ -9,7 +9,7 @@ player::player()
 	mVictories = 0;
 	mLost = 0;
     mCurrentBet = 0;
-    mBalance = 0;
+    mBalance = 99999999999999; //Default for dealer
 }
 
 int  player::getTotalVal()
@@ -24,7 +24,7 @@ void player::setBalance()
     //not nice - temporary desicion
     QInputDialog * dialog = new QInputDialog();
     dialog->setOptions(QInputDialog:: NoButtons);
-    mBalance = dialog->getDouble(NULL, "Get Total Balance", "Amount: ", 10, 10, 100000, 10);
+    mBalance = dialog->getDouble(NULL, "Get Total Balance", "Amount: ", 10, 10, 100000, 2);
 
 }
 
@@ -38,8 +38,9 @@ double player::getBet()
 }
 void player::setBet()
 {
-    // mCurrentBet = MainWindow::ui->doubleSpinBox->value();
-    //mBalance = mBalance - bet;
+    QInputDialog * dialog = new QInputDialog();
+    dialog->setOptions(QInputDialog:: NoButtons);
+    mCurrentBet = dialog->getDouble(NULL, "Get Total Bet", "Amount: ", 10, 10, 100000, 2);
 }
 
 

@@ -18,9 +18,11 @@ MainWindow::MainWindow(QWidget *parent) :
     //Set up view here
     //Testing - not finished yet
     myGame.mPlayer.setBalance();
+    myGame.mPlayer.setBet();
 
 
     ui->lblBalance->setText(QString::number(myGame.mPlayer.getBalance()));
+    ui->lblCurrentBet->setText(QString::number(myGame.mPlayer.getBet()));
     pLayout = new QHBoxLayout();
     dLayout = new QHBoxLayout();
 
@@ -127,7 +129,6 @@ void MainWindow::disableButtons()
     ui->btnHit->setDisabled(true);
     ui->btnStand->setDisabled(true);
     ui->btnSurrender->setDisabled(true);
-    ui->doubleSpinBox->setDisabled(true);
 
 }
 void MainWindow::on_btnSurrender_clicked()
@@ -150,9 +151,8 @@ void MainWindow::on_doubleSpinBox_valueChanged() {
 void MainWindow::on_actionNew_Game_triggered()
 {
     myGame = game();
-    myGame.mPlayer.setBalance();
-
-
+    myGame.mPlayer.setBet();
+    ui->lblCurrentBet->setText(QString::number(myGame.mPlayer.getBet()));
     delete pLayout;
     qDeleteAll(ui->widgetP->children());
     delete dLayout;

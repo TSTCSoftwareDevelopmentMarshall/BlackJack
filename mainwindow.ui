@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>862</width>
+    <width>543</width>
     <height>599</height>
    </rect>
   </property>
@@ -30,7 +30,7 @@
    <widget class="QPushButton" name="btnStand">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>170</x>
       <y>490</y>
       <width>75</width>
       <height>23</height>
@@ -43,7 +43,7 @@
    <widget class="QPushButton" name="btnSurrender">
     <property name="geometry">
      <rect>
-      <x>380</x>
+      <x>310</x>
       <y>490</y>
       <width>75</width>
       <height>23</height>
@@ -51,31 +51,6 @@
     </property>
     <property name="text">
      <string>Surrender</string>
-    </property>
-   </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>490</y>
-      <width>62</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="inputMethodHints">
-     <set>Qt::ImhFormattedNumbersOnly</set>
-    </property>
-    <property name="minimum">
-     <double>1.000000000000000</double>
-    </property>
-    <property name="maximum">
-     <double>10000.000000000000000</double>
-    </property>
-    <property name="singleStep">
-     <double>1.000000000000000</double>
-    </property>
-    <property name="value">
-     <double>1.000000000000000</double>
     </property>
    </widget>
    <widget class="QLabel" name="lblInfo">
@@ -163,10 +138,10 @@
      <string/>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>710</x>
+      <x>440</x>
       <y>480</y>
       <width>71</width>
       <height>34</height>
@@ -189,10 +164,10 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>790</x>
+      <x>520</x>
       <y>480</y>
       <width>18</width>
       <height>34</height>
@@ -221,7 +196,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>862</width>
+     <width>543</width>
      <height>21</height>
     </rect>
    </property>
@@ -262,22 +237,5 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections>
-  <connection>
-   <sender>doubleSpinBox</sender>
-   <signal>valueChanged(double)</signal>
-   <receiver>lblCurrentBet</receiver>
-   <slot>setNum(double)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>562</x>
-     <y>539</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>790</x>
-     <y>552</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
