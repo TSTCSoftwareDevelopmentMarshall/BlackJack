@@ -14,13 +14,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
 
-
     ui->setupUi(this);
 
     //Set up view here
     //Testing - not finished yet
     myGame.mPlayer.setBalance();
-
+    ui->doubleSpinBox->setMaximum(myGame.mPlayer.getBalance());
 
     ui->lblBalance->setText(QString::number(myGame.mPlayer.getBalance()));
     pLayout = new QHBoxLayout();
@@ -180,6 +179,7 @@ void MainWindow::on_actionNew_Game_triggered()
     myGame.mDealer.mHand.getSecondCard().showCard(label3);
     dLayout->addWidget(label2);
     dLayout->addWidget(label3);
+
     enable();
 
 }
@@ -197,3 +197,4 @@ void MainWindow::enable()
     ui->btnSurrender->setDisabled(false);
     ui->doubleSpinBox->setDisabled(false);
 }
+

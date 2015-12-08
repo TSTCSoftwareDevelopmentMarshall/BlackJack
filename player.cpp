@@ -36,13 +36,13 @@ double player::getBet()
 {
 	return mCurrentBet;
 }
+
 void player::setBet(double bet)
 {
      mCurrentBet = bet;
      mBalance = mBalance - bet;
+
 }
-
-
 
 double player::victory(double percentage)
 {
