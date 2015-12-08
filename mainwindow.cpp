@@ -116,6 +116,8 @@ void MainWindow::declareVictory(double percentage)
     disableButtons();
     prize = myGame.mPlayer.victory(percentage);
     ui->lblNum->setText(QString::number(prize));
+    delete pLayout;
+    delete dLayout;
 
 }
 void MainWindow::disableButtons()
@@ -148,11 +150,14 @@ void MainWindow::on_actionNew_Game_triggered()
 {
     myGame = game();
 
-   // delete pLayout;
-   // delete dLayout;
+    delete pLayout;
+    qDeleteAll(ui->widgetP->children());
+    delete dLayout;
+    qDeleteAll(ui->widgetD->children());
     pLayout = new QHBoxLayout();
     dLayout = new QHBoxLayout();
 
+    ui->widgetP->setLayout(pLayout);
     QLabel * label1 = new QLabel();
     QLabel * label = new QLabel();
 
@@ -161,7 +166,6 @@ void MainWindow::on_actionNew_Game_triggered()
 
     pLayout->addWidget(label);
     pLayout->addWidget(label1);
-
 
     ui->widgetD->setLayout(dLayout);
     QLabel * label2 = new QLabel();
