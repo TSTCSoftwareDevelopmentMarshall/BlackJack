@@ -1,0 +1,61 @@
+<RCC>
+    <qresource prefix="/CardImages">
+        <file alias="BlueBackCard">cards_png/b1fv.png</file>
+        <file alias="RedBackCard">cards_png/b2fv.png</file>
+        <file alias="ClubsThree">cards_png/c3.png</file>
+        <file alias="ClubsFour">cards_png/c4.png</file>
+        <file alias="ClubsFive">cards_png/c5.png</file>
+        <file alias="ClubsSix">cards_png/c6.png</file>
+        <file alias="ClubsSeven">cards_png/c7.png</file>
+        <file alias="ClubsEight">cards_png/c8.png</file>
+        <file alias="ClubsNine">cards_png/c9.png</file>
+        <file alias="ClubsTen">cards_png/c10.png</file>
+        <file alias="ClubsJack">cards_png/cj.png</file>
+        <file alias="ClubsKing">cards_png/ck.png</file>
+        <file alias="ClubsQueen">cards_png/cq.png</file>
+        <file alias="DiamondsAce">cards_png/d1.png</file>
+        <file alias="DiamondsTwo">cards_png/d2.png</file>
+        <file alias="DiamondsThree">cards_png/d3.png</file>
+        <file alias="DiamondsFour">cards_png/d4.png</file>
+        <file alias="DiamondsFive">cards_png/d5.png</file>
+        <file alias="DiamondsSix">cards_png/d6.png</file>
+        <file alias="DiamondsSeven">cards_png/d7.png</file>
+        <file alias="DiamondsEight">cards_png/d8.png</file>
+        <file alias="DiamondsNine">cards_png/d9.png</file>
+        <file alias="DiamondsTen">cards_png/d10.png</file>
+        <file alias="DiamondsJack">cards_png/dj.png</file>
+        <file alias="DiamondsKing">cards_png/dk.png</file>
+        <file alias="DiamondsQueen">cards_png/dq.png</file>
+        <file>cards_png/ec.png</file>
+        <file alias="HeartsAce">cards_png/h1.png</file>
+        <file alias="HeartsTwo">cards_png/h2.png</file>
+        <file alias="HeartsThree">cards_png/h3.png</file>
+        <file alias="HeartsFour">cards_png/h4.png</file>
+        <file alias="HeartsFive">cards_png/h5.png</file>
+        <file alias="HeartsSix">cards_png/h6.png</file>
+        <file alias="HeartsSeven">cards_png/h7.png</file>
+        <file alias="HeartsEight">cards_png/h8.png</file>
+        <file alias="HeartsNine">cards_png/h9.png</file>
+        <file alias="HeartsTen">cards_png/h10.png</file>
+        <file alias="HeartsJack">cards_png/hj.png</file>
+        <file alias="HeartsKing">cards_png/hk.png</file>
+        <file alias="HeartsQueen">cards_png/hq.png</file>
+        <file>cards_png/jb.png</file>
+        <file>cards_png/jr.png</file>
+        <file alias="SpadesAce">cards_png/s1.png</file>
+        <file alias="SpadesTwo">cards_png/s2.png</file>
+        <file alias="SpadesThree">cards_png/s3.png</file>
+        <file alias="SpadesFour">cards_png/s4.png</file>
+        <file alias="SpadesFive">cards_png/s5.png</file>
+        <file alias="SpadesSix">cards_png/s6.png</file>
+        <file alias="SpadesSeven">cards_png/s7.png</file>
+        <file alias="SpadesEight">cards_png/s8.png</file>
+        <file alias="SpadesNine">cards_png/s9.png</file>
+        <file alias="SpadesTen">cards_png/s10.png</file>
+        <file alias="SpadesJack">cards_png/sj.png</file>
+        <file alias="SpadesKing">cards_png/sk.png</file>
+        <file alias="SpadesQueen">cards_png/sq.png</file>
+        <file alias="ClubsAce">cards_png/c1.png</file>
+        <file alias="ClubsTwo">cards_png/c2.png</file>
+    </qresource>
+</RCC>
